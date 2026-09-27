@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 search engines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .search-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .search-row label {
+            width: 90px;
+            font-weight: bold;
+        }
+        .search-row form {
+            display: flex;
+            flex: 1;
+        }
+        .search-row input[type="text"] {
+            flex: 1;
+            padding: 6px 10px;
+            border: 1px solid #999;
+            font-size: 14px;
+        }
+        .search-row input[type="submit"] {
+            padding: 6px 14px;
+            border: 1px solid #999;
+            border-left: none;
+            background: #eee;
+            cursor: pointer;
+        }
+        .search-row input[type="submit"]:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Поиск в 5 системах</h1>
+
+    <div class="search-row">
+        <label>Google</label>
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Запрос">
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+
+    <div class="search-row">
+        <label>Яндекс</label>
+        <form action="https://yandex.ru/search/" method="GET">
+            <input type="text" name="text" placeholder="Запрос">
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+
+    <div class="search-row">
+        <label>Bing (Edge)</label>
+        <form action="https://www.bing.com/search" method="GET">
+            <input type="text" name="q" placeholder="Запрос">
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+
+    <div class="search-row">
+        <label>DuckDuckGo</label>
+        <form action="https://duckduckgo.com/" method="GET">
+            <input type="text" name="q" placeholder="Запрос">
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+
+    <div class="search-row">
+        <label>Yahoo</label>
+        <form action="https://search.yahoo.com/search" method="GET">
+            <input type="text" name="p" placeholder="Запрос">
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
