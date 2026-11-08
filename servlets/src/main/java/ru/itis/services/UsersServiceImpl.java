@@ -16,7 +16,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public List getAll() throws SQLException {
+    public List<User> getAll() throws SQLException {
         return usersRepository.findAll();
     }
 
@@ -29,5 +29,32 @@ public class UsersServiceImpl implements UsersService {
                 .password("qwerty007")
                 .build();
         usersRepository.save(user);
+    }
+
+    @Override
+    public void addUsers(List<User> users) throws SQLException {
+        for (User user : users) {
+            usersRepository.save(user);
+        }
+    }
+
+    @Override
+    public int getUsersCount() throws SQLException {
+        return usersRepository.getUsersCount();
+    }
+
+    @Override
+    public List<User> findByCity(String city) throws SQLException {
+        return usersRepository.findByCity(city);
+    }
+
+    @Override
+    public List<User> findByAgeGreaterThan(int age) throws SQLException {
+        return usersRepository.findByAgeGreaterThan(age);
+    }
+
+    @Override
+    public List<User> findByPhone(String phone) throws SQLException {
+        return usersRepository.findByPhone(phone);
     }
 }
